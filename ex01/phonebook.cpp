@@ -6,7 +6,7 @@
 /*   By: tjose <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 20:30:53 by tjose             #+#    #+#             */
-/*   Updated: 2017/07/04 22:53:44 by tjose            ###   ########.fr       */
+/*   Updated: 2018/01/08 14:46:56 by tjose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int	get_index(Contact book[8])
 
 int main()
 {
-	Contact book[8];
+	Contact		book[8];
 	std::string input;
-	int k;
-	int i;
+	int			k;
+	int			i;
 
 	while (1)
 	{

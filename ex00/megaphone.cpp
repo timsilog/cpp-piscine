@@ -6,7 +6,7 @@
 /*   By: tjose <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/04 10:22:36 by tjose             #+#    #+#             */
-/*   Updated: 2018/01/08 14:44:12 by tjose            ###   ########.fr       */
+/*   Updated: 2018/01/08 15:06:56 by tjose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 	{
 		for (int j = 0; argv[i][j]; j++)
 		{
-			argv[i][j] = toupper(argv[i][j]);
+			argv[i][j] = std::toupper(argv[i][j]);
 			std::cout << argv[i][j];
 		}
 	}
