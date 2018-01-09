@@ -46,27 +46,27 @@ int main()
 				continue ;
 			}
 			book[i].exists = true;
-			std::cout << "Lets add a new contact to our book!\nPlease enter the following.\nLast Name:";
+			std::cout << "Lets add a new contact to our book!\nPlease enter the following.\nLast Name: ";
 			std::cin >> book[i].lastname;
-			std::cout << "First Name:";
+			std::cout << "First Name: ";
 			std::cin >> book[i].firstname;
-			std::cout << "Nickname:";
+			std::cout << "Nickname: ";
 			std::cin >> book[i].nickname;
-			std::cout << "Login:";
+			std::cout << "Login: ";
 			std::cin >> book[i].login;
-			std::cout << "Postal Address:";
+			std::cout << "Postal Address: ";
 			std::cin >> book[i].address;
-			std::cout << "Email Address:";
+			std::cout << "Email Address: ";
 			std::cin >> book[i].email;
-			std::cout << "Phone Number:";
+			std::cout << "Phone Number: ";
 			std::cin >> book[i].phone;
-			std::cout << "Birth Date:";
+			std::cout << "Birth Date: ";
 			std::cin >> book[i].birthday;
-			std::cout << "Favorite Meal:";
+			std::cout << "Favorite Meal: ";
 			std::cin >> book[i].meal;
-			std::cout << "Underwear Color:";
+			std::cout << "Underwear Color: ";
 			std::cin >> book[i].underwear;
-			std::cout << "Darkest Secret:";
+			std::cout << "Darkest Secret: ";
 			std::cin >> book[i].secret;
 			std::cout << "Contact added!\n";
 		}
@@ -89,13 +89,13 @@ int main()
 				else
 					std::cout << std::left << std::setw(10) << book[j].nickname << std::endl;
 			}
-			std::cout << "Select an Index:";
+			std::cout << "Select an Index: ";
 			std::cin >> k;
-			if (std::cin.fail())
+			if (std::cin.fail() || k > 7)
 			{
-				std::cout << "That wasn't an integer!\n";
+				std::cout << "Nothing at that index!\n";
 				std::cin.clear();
-				std::cin.ignore();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				continue ;
 			}
 			if (book[k].exists)
@@ -113,9 +113,16 @@ int main()
 				<< "\nDarkest Secret: " << book[k].secret << std::endl;
 			}
 			else
+			{
 				std::cout << "No contact exists at that index" << std::endl;
+				std::cin.clear();
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			}
 		}
 		else
+		{
+			std::cout << input;
 			std::cout << "I didn't understand that command!" << std::endl;
+		}
 	}
 }
