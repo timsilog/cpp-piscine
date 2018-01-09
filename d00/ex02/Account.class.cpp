@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Account.class.cpp                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tjose <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/08 23:35:49 by tjose             #+#    #+#             */
+/*   Updated: 2018/01/08 23:36:52 by tjose            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <ctime>
 #include <iomanip>
@@ -25,8 +37,7 @@ Account::~Account ( void ) {
     << this->_accountIndex
     << ";amount:"
     << this->_amount
-    << ";closed"
-    << std::endl;
+    << ";closed\n"
     return;
 }
 
