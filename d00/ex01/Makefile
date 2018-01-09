@@ -14,12 +14,13 @@ NAME = phonebook
 CC = clang++
 CFLAGS = -Wall -Werror -Wextra
 SRCS = phonebook.cpp
+OBJS = phonebook.o
 
 all: $(NAME)
 
 $(NAME):
 	$(CC) $(CFLAGS) -c $(SRCS)
-	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 	rm -f *.o
