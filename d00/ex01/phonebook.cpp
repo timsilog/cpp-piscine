@@ -29,100 +29,94 @@ int main()
 {
 	Contact		book[8];
 	std::string input;
-	int			k;
+	std::string	searched_index;
 	int			i;
+	int			current_index = 0;
 
 	while (1)
 	{
 		std::cout << "Enter a command: ";
-		std::cin >> input;
+		std::getline (std::cin, input);
 		if (input == "EXIT")
 			break ;
 		else if (input == "ADD")
 		{
-			if ((i = get_index(book)) > 7)
+			if (current_index > 7)
 			{
 				std::cout << "The phonebook is full!\n";
 				continue ;
 			}
-			book[i].exists = true;
 			std::cout << "Lets add a new contact to our book!\nPlease enter the following.\nLast Name: ";
-			std::cin >> book[i].lastname;
+			std::getline (std::cin, book[current_index].lastname);
 			std::cout << "First Name: ";
-			std::cin >> book[i].firstname;
+			std::getline (std::cin, book[current_index].firstname);
 			std::cout << "Nickname: ";
-			std::cin >> book[i].nickname;
+			std::getline (std::cin, book[current_index].nickname);
 			std::cout << "Login: ";
-			std::cin >> book[i].login;
+			std::getline (std::cin, book[current_index].login);
 			std::cout << "Postal Address: ";
-			std::cin >> book[i].address;
+			std::getline (std::cin, book[current_index].address);
 			std::cout << "Email Address: ";
-			std::cin >> book[i].email;
+			std::getline (std::cin, book[current_index].email);
 			std::cout << "Phone Number: ";
-			std::cin >> book[i].phone;
+			std::getline (std::cin, book[current_index].phone);
 			std::cout << "Birth Date: ";
-			std::cin >> book[i].birthday;
+			std::getline (std::cin, book[current_index].birthday);
 			std::cout << "Favorite Meal: ";
-			std::cin >> book[i].meal;
+			std::getline (std::cin, book[current_index].meal);
 			std::cout << "Underwear Color: ";
-			std::cin >> book[i].underwear;
+			std::getline (std::cin, book[current_index].underwear);
 			std::cout << "Darkest Secret: ";
-			std::cin >> book[i].secret;
+			std::getline (std::cin, book[current_index].secret);
 			std::cout << "Contact added!\n";
+			book[current_index].exists = true;
+			current_index++;
 		}
 		else if (input == "SEARCH")
 		{
-			std::cout << "Contacts:\nIndex     |FirstName |LastName  |Nickname\n";
-			for (int j = 0; j < 8; j++)
+			std::cout << "Contacts:\n     Index| FirstName|  LastName|  Nickname\n";
+			for (int j = 0; book[j].exists; j++)
 			{
-				std::cout << std::left << std::setw(10) << j << "|";
-				if (book[j].firstname.length() > 9)
+				std::cout << std::setw(10) << j << "|";
+				if (book[j].firstname.length() > 10)
 					std::cout << book[j].firstname.substr(0, 9) << ".|";
 				else
-					std::cout << std::left << std::setw(10) << book[j].firstname << "|";
-				if (book[j].lastname.length() > 9)
+					std::cout << std::setw(10) << book[j].firstname << "|";
+				if (book[j].lastname.length() > 10)
 					std::cout << book[j].lastname.substr(0, 9) << ".|";
 				else
-					std::cout << std::left << std::setw(10) << book[j].lastname << "|";
-				if (book[j].nickname.length() > 9)
-					std::cout << book[j].lastname.substr(0, 9) << "." << std::endl;
+					std::cout << std::setw(10) << book[j].lastname << "|";
+				if (book[j].nickname.length() > 10)
+					std::cout << book[j].nickname.substr(0, 9) << "." << std::endl;
 				else
-					std::cout << std::left << std::setw(10) << book[j].nickname << std::endl;
+					std::cout << std::setw(10) << book[j].nickname << std::endl;
 			}
 			std::cout << "Select an Index: ";
-			std::cin >> k;
-			if (std::cin.fail() || k > 7)
+			std::getline (std::cin, searched_index);
+			if (searched_index.length() > 1 || searched_index[0] < '0' || searched_index[0] > '7')
 			{
 				std::cout << "Nothing at that index!\n";
-				std::cin.clear();
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 				continue ;
 			}
-			if (book[k].exists)
+			i = searched_index[0] - '0';
+			if (book[i].exists)
 			{
-				std::cout << "Last Name: " << book[k].lastname
-				<< "\nFirst Name: " << book[k].firstname
-				<< "\nNickname: " << book[k].nickname
-				<< "\nLogin: " << book[k].login
-				<< "\nPostal Address: " << book[k].address
-				<< "\nEmail: " << book[k].email
-				<< "\nPhone Number: " << book[k].phone
-				<< "\nBirth Date: " << book[k].birthday
-				<< "\nFavorite Meal: " << book[k].meal
-				<< "\nUnderwear Color: " << book[k].underwear
-				<< "\nDarkest Secret: " << book[k].secret << std::endl;
+				std::cout << "Last Name: " << book[i].lastname
+				<< "\nFirst Name: " << book[i].firstname
+				<< "\nNickname: " << book[i].nickname
+				<< "\nLogin: " << book[i].login
+				<< "\nPostal Address: " << book[i].address
+				<< "\nEmail: " << book[i].email
+				<< "\nPhone Number: " << book[i].phone
+				<< "\nBirth Date: " << book[i].birthday
+				<< "\nFavorite Meal: " << book[i].meal
+				<< "\nUnderwear Color: " << book[i].underwear
+				<< "\nDarkest Secret: " << book[i].secret << std::endl;
 			}
 			else
-			{
-				std::cout << "No contact exists at that index" << std::endl;
-				std::cin.clear();
-				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			}
+				std::cout << "Nothing at that index!\n";
 		}
 		else
-		{
-			std::cout << input;
 			std::cout << "I didn't understand that command!" << std::endl;
-		}
 	}
 }
