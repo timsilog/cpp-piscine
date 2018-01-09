@@ -37,7 +37,7 @@ Account::~Account ( void ) {
     << this->_accountIndex
     << ";amount:"
     << this->_amount
-    << ";closed\n"
+    << ";closed\n";
     return;
 }
 

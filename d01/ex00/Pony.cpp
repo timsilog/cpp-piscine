@@ -21,6 +21,6 @@ Pony::Pony(std::string str, std::string color) : _str(str), color(color)
 
 Pony::~Pony(void)
 {
-	std::cout << "Pony was deleted\n";
+	std::cout << "Pony" << this->_str << "was deleted\n";
 	return ;
 }
