@@ -11,10 +11,14 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <iostream>
 
-Zombie::Zombie(std::string name) : name(name){}
+Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type){}
 
-Zombie::announce(void)
-{
-	std::cout << "<" << this->name << "> Braiiiiiinnnssss...\n";
+Zombie::~Zombie( void ) {
+	std::cout << this->_name << " dies..\n";
+}
+
+void	Zombie::announce( void ) {
+	std::cout << "<" << this->_name << "(" << this->_type << ")> Braiiiiiinnnssss...\n";
 }

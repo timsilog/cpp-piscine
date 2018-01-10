@@ -11,9 +11,24 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include "ZombieEvent.hpp"
+#include <iostream>
 
 int main(void)
 {
-	Zombie bob("bob");
-	bob.announce();
+	ZombieEvent* event = new ZombieEvent();
+
+	event->setZombieType("filthy");
+	Zombie* brandon = event->newZombie("Brandon");
+	std::cout << "I will create 5 random chumps..\n";
+	for (int i = 0; i < 5; i++)
+	{
+		event->randomChump();
+	}
+	std::cout << "Changing type..\n";
+	event->setZombieType("beautiful");
+	Zombie* blake = event->newZombie("Blake");
+	delete brandon;
+	delete blake;
+	delete event;
 }
