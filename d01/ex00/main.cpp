@@ -30,7 +30,7 @@ int		main(void)
 {
 	Pony s = ponyonthestack(" on the stack ", "green");
 	Pony* h = ponyontheheap(" on the heap ", "blue");
-	std::cout << "Pony on the stack is " << s.color << std::endl;
-	std::cout << "Pony on the heap is " << h->color << std::endl;
+	std::cout << "Pony on the stack is " << s.getColor() << std::endl;
+	std::cout << "Pony on the heap is " << h->getColor() << std::endl;
 	delete h;
 }

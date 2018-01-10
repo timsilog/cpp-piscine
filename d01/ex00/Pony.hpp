@@ -18,10 +18,11 @@ class Pony
 {
 	private:
 		std::string _str;
+		std::string _color;
 	public:
-		std::string color;
 		Pony(std::string str, std::string color);
 		~Pony();
+		std::string 	getColor( void );
 };
 
 #endif
