@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tjose <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/01/09 22:47:02 by tjose             #+#    #+#             */
+/*   Updated: 2018/01/09 22:47:10 by tjose            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef ZOMBIEHORDE_HPP
 # define ZOMBIEHORDE_HPP
 # include <string>
@@ -21,4 +33,4 @@ class ZombieHorde
 		void	setZombieType(std::string type);
 };
 
-# endif
+#endif
