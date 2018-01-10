@@ -24,10 +24,7 @@ Pony::~Pony(void)
 	std::cout << "Pony" << this->_str << "was deleted\n";
 	return ;
 }
-<<<<<<< HEAD
 
 std::string	Pony::getColor( void ) {
 	return (this->_color);
 }
-=======
->>>>>>> c2c4c31c920ae3dec72a0ff83a57654685059d7c
