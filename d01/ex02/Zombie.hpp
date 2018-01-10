@@ -23,7 +23,7 @@ class Zombie
 	public:
 		Zombie( void );
 		~Zombie( void );
-		void	announce( void );
+		void	announce( void ) const;
 		void	setName(std::string name);
 		void	setType(std::string type);
 		void	setBoth(std::string name, std::string type);

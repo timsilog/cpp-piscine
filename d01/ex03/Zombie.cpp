@@ -34,6 +34,6 @@ void	Zombie::setBoth(std::string name, std::string type) {
 	this->setType(type);
 }
 
-void	Zombie::announce( void ) {
+void	Zombie::announce( void ) const {
 	std::cout << "<" << this->_name << "(" << this->_type << ")> Braiiiiiinnnssss...\n";
 }

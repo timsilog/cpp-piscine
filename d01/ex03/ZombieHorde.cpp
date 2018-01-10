@@ -15,7 +15,7 @@ ZombieHorde::~ZombieHorde( void ) {
     delete[] this->_zombies;
 }
 
-void    ZombieHorde::announce( void ) {
+void    ZombieHorde::announce( void ) const {
     for (int i = 0; i < this->_numZombies; i++)
         this->_zombies[i].announce();
 }

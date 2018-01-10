@@ -17,7 +17,7 @@ class ZombieHorde
 	public:
 		ZombieHorde( int n );
 		~ZombieHorde( void );
-		void	announce( void );
+		void	announce( void ) const;
 		void	setZombieType(std::string type);
 };
 
