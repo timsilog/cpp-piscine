@@ -1,8 +1,4 @@
 #include "ZombieEvent.hpp"
-#include <string>
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
 
 ZombieEvent::ZombieEvent( void ) {
     this->_type = "";
