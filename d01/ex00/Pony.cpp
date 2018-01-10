@@ -6,7 +6,7 @@
 /*   By: tjose <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/07/05 10:52:05 by tjose             #+#    #+#             */
-/*   Updated: 2017/07/05 11:11:00 by tjose            ###   ########.fr       */
+/*   Updated: 2018/01/09 22:45:22 by tjose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,10 @@ Pony::~Pony(void)
 	std::cout << "Pony" << this->_str << "was deleted\n";
 	return ;
 }
+<<<<<<< HEAD
 
 std::string	Pony::getColor( void ) {
 	return (this->_color);
 }
+=======
+>>>>>>> c2c4c31c920ae3dec72a0ff83a57654685059d7c
