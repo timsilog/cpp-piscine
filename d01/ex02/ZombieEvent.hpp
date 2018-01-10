@@ -2,10 +2,10 @@
 # define ZOMBIEEVENT_HPP
 # include <string>
 # include "Zombie.hpp"
-#include <string>
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
+# include <string>
+# include <iostream>
+# include <cstdlib>
+# include <ctime>
 class ZombieEvent
 {
 	private:

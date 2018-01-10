@@ -16,13 +16,15 @@ void        ZombieEvent::setZombieType(std::string type) {
 }
 
 Zombie*     ZombieEvent::newZombie(std::string name) {
-    Zombie* temp = new Zombie(name, this->_type);
+    Zombie* temp = new Zombie();
+    temp->setBoth(name, this->_type);
     temp->announce();
     return (temp);
 }
 
 void        ZombieEvent::randomChump( void ) {
-    Zombie temp = Zombie(this->_names[std::rand() % 5], this->_type);
+    Zombie temp = Zombie();
+    temp.setBoth(this->_names[std::rand() % 5], this->_type);
     temp.announce();
 }
 

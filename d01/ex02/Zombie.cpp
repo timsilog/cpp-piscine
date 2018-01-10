@@ -11,12 +11,27 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include <iostream>
 
-Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type){}
+Zombie::Zombie( void ) {
+	this->_name = "";
+	this->_type = "";
+}
 
 Zombie::~Zombie( void ) {
 	std::cout << this->_name << " dies..\n";
+}
+
+void	Zombie::setName(std::string name) {
+	this->_name = name;
+}
+
+void	Zombie::setType(std::string type) {
+	this->_type = type;
+}
+
+void	Zombie::setBoth(std::string name, std::string type) {
+	this->setName(name);
+	this->setType(type);
 }
 
 void	Zombie::announce( void ) {

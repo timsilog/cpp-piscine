@@ -21,9 +21,12 @@ class Zombie
 		std::string		_name;
 		std::string		_type;
 	public:
-		Zombie(std::string name, std::string type);
+		Zombie( void );
 		~Zombie( void );
 		void	announce( void );
+		void	setName(std::string name);
+		void	setType(std::string type);
+		void	setBoth(std::string name, std::string type);
 };
 
 # endif
