@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(std::string name) : _hp(100), _maxHp(100), _ep(50), _maxEp(50), _lvl(1), _mAtk(20), _rAtk(15), _def(3) {
+ScavTrap::ScavTrap(void) : _hp(100), _maxHp(100), _ep(50), _maxEp(50), _lvl(1), _mAtk(20), _rAtk(15), _def(3) {
     std::string quotes[5] = {
         "The gates are open.\n",
         "LEEEROYY JEEEEENNKIIIIIIIINSS.\n",
