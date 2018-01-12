@@ -7,8 +7,17 @@ Victim::Victim(std::string name) : _name(name) {
     << " just popped !\n";
 }
 
+Victim::Victim(Victim const & src) {
+    *this = src;
+}
+
 Victim::~Victim(void) {
     std::cout << "Victim " << this->_name << " just died for no apparent reason !\n";
+}
+
+Victim & Victim::operator=(Victim const & rhs) {
+    this->_name = rhs._name;
+    return (*this);
 }
 
 std::string Victim::getName(void) {

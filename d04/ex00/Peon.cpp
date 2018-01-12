@@ -7,6 +7,10 @@ Peon::Peon(std::string name) : Victim(name) {
     std::cout << "Zog zog.\n";
 }
 
+Peon::Peon(Peon const & src) {
+    *this = src;
+}
+
 Peon::~Peon(void) {
     std::cout << "Bleuark...\n";
 }

@@ -6,13 +6,19 @@ Sorcerer::Sorcerer(std::string name, std::string title) : _name(name), _title(ti
 
 Sorcerer::Sorcerer(void) {}
 
+Sorcerer::Sorcerer(Sorcerer const & src) {
+    *this = src;
+}
+
 Sorcerer::~Sorcerer() {
     std::cout << this->_name << ", " << this->_title
     << ", is dead. Consequences will never be the same !\n";
 }
 
 Sorcerer & Sorcerer::operator=(Sorcerer const & rhs) {
-    *this = rhs;
+    this->_name = rhs._name;
+    this->_title = rhs._title;
+    return (*this);
 }
 
 std::string Sorcerer::getName(void) {

@@ -7,6 +7,10 @@ Beggar::Beggar(std::string name) : Victim(name) {
     std::cout << "Could you spare some change? Or even some bread?\n";
 }
 
+Beggar::Beggar(Beggar const & src) {
+    *this = src;
+}
+
 Beggar::~Beggar(void) {
     std::cout << "I wasn't meant to be in this world anyways...\n";
 }

@@ -11,7 +11,9 @@ class Beggar : public Victim
         Beggar(void);
     public:
         Beggar(std::string name);
+        Beggar(Beggar const & src);
         ~Beggar(void);
+        using Victim::operator=;
         void    getPolymorphed(void) const;
 };
 
