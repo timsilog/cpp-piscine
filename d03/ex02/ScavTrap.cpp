@@ -24,9 +24,9 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 
 ScavTrap::~ScavTrap(void) {
     std::string quotes[5] = {
-        "FUS RO DA!",
+        "You Spoony Bard!",
         "Looks like Team Rocket is blasting off agaaaaain!",
-        "Falcon Punch!.",
+        "Faaaaalcon PUNCH!.",
         "All your base are belong to us.",
         "I used to be an adventurer like you, but then I took an arrow to the knee."
     };
@@ -49,5 +49,5 @@ void    ScavTrap::challengeNewcomer(std::string const & target) {
     }
     this->_ep -= 25;
     std::cout << this->announce() << "Challenges <" << target
-    << " to do the <" << challenges[rand() % 5] << ">!\n";
+    << "> to do the <" << challenges[rand() % 5] << ">!\n";
 }

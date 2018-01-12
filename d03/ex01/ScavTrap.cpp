@@ -111,5 +111,5 @@ void    ScavTrap::challengeNewcomer(std::string const & target) {
     }
     this->_ep -= 25;
     std::cout << this->announce() << "Challenges <" << target
-    << " to do the <" << challenges[rand() % 5] << ">!\n";
+    << "> to do the <" << challenges[rand() % 5] << ">!\n";
 }
