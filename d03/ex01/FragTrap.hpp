@@ -18,6 +18,7 @@ class FragTrap
         int         _def;
 
     public:
+        FragTrap(void);
         FragTrap( std::string name );
         FragTrap(FragTrap const & src);
         ~FragTrap ( void );

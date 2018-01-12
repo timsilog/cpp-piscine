@@ -18,6 +18,7 @@ class ClapTrap
         int         _def;
         std::string _type;
     public:
+        ClapTrap(void);
         ClapTrap( std::string name );
         ClapTrap(ClapTrap const & src);
         ~ClapTrap ( void );

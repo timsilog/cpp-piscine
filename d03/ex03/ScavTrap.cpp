@@ -1,5 +1,26 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap(void) : ClapTrap() {
+    std::string quotes[5] = {
+        "The gates are open.\n",
+        "LEEEROYY JEEEEENNKIIIIIIIINSS.\n",
+        "MRGLGLRGLLGGLRLRGLL.\n",
+        "You require my assistance?\n",
+        "That belongs in a museum!\n"
+    };
+    this->_name = "default";
+    this->_hp = 100;
+    this->_maxHp = 100;
+    this->_ep = 50;
+    this->_maxEp = 50;
+    this->_lvl = 1;
+    this->_mAtk = 20;
+    this->_rAtk = 15;
+    this->_def = 3;
+    this->_type = "SC4V-TP";
+    std::cout << this->announce() << quotes[rand() % 5];
+}
+
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     std::string quotes[5] = {
         "The gates are open.\n",

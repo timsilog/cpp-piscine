@@ -22,8 +22,8 @@ void    ep(NinjaTrap & x) {
 }
 
 int main() {
-    FragTrap x("Bob");
-    ScavTrap y("Charlie");
+    FragTrap x("Brock");
+    ScavTrap y("Ash");
     NinjaTrap z("James");
     NinjaTrap a("Jesse");
 

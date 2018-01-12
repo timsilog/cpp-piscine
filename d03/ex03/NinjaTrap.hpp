@@ -8,10 +8,11 @@ class NinjaTrap : public ClapTrap
 {
     private:
     public:
+        NinjaTrap(void);
         NinjaTrap( std::string name );
         NinjaTrap(NinjaTrap const & src);
         ~NinjaTrap ( void );
-        NinjaTrap & operator=(NinjaTrap const & rhs);
+        // NinjaTrap & operator=(NinjaTrap const & rhs);
 
         void    ninjaShoebox(NinjaTrap & t);
         void    ninjaShoebox(FragTrap & t);

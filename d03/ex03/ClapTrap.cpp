@@ -1,5 +1,10 @@
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(void) {
+    this->_name = "default";
+    std::cout << "<CLAPTRAP CREATED>\n";
+}
+
 ClapTrap::ClapTrap(std::string name) : _name(name) {
     std::cout << "<CLAPTRAP CREATED>\n";
     // std::srand(std::time(0));

@@ -15,8 +15,8 @@ void    ep(ScavTrap & x) {
 }
 
 int main() {
-    FragTrap x("Bob");
-    ScavTrap y("Charlie");
+    FragTrap x("Brock");
+    ScavTrap y("Ash");
     hp(x);
     x.takeDamage(29);
     hp(x);

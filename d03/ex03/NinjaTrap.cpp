@@ -1,5 +1,25 @@
 #include "NinjaTrap.hpp"
 
+NinjaTrap::NinjaTrap(void) : ClapTrap() {
+    std::string quotes[4] = {
+        "The eyes never lie.\n",
+        "A demonstration of superior judgment.\n",
+        "The unseen blade is the deadliest.\n",
+        "As balance dictates\n",
+    };
+    this->_name = "default";
+    this->_hp = 60;
+    this->_maxHp = 60;
+    this->_ep = 120;
+    this->_maxEp = 120;
+    this->_lvl = 1;
+    this->_mAtk = 60;
+    this->_rAtk = 5;
+    this->_def = 0;
+    this->_type = "N1NJ4-TP";
+    std::cout << this->announce() << quotes[rand() % 4];
+}
+
 NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name) {
     std::string quotes[4] = {
         "The eyes never lie.\n",
@@ -20,7 +40,7 @@ NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name) {
     std::cout << this->announce() << quotes[rand() % 4];
 }
 
-NinjaTrap::Ninjatrap(NinjaTrap const & src) {
+NinjaTrap::NinjaTrap(NinjaTrap const & src) {
     *this = src;
 }
 

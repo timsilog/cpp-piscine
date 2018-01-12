@@ -15,8 +15,15 @@ void    ep(ScavTrap & x) {
 }
 
 int main() {
-    FragTrap x("Bob");
-    ScavTrap y("Charlie");
+    FragTrap x("Brock");
+    ScavTrap y("Ash");
+
+    std::cout << std::endl;
+    ScavTrap z;
+    z = y; // demonstrating operator overload from parent class (throws error on z = x)
+    hp(z);
+    std::cout << std::endl;
+
     hp(x);
     x.takeDamage(29);
     hp(x);

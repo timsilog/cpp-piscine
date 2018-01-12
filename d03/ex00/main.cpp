@@ -8,7 +8,7 @@ void    ep(FragTrap & x) {
 }
 
 int main() {
-    FragTrap x("Bob");
+    FragTrap x("Brock");
     hp(x);
     x.takeDamage(29);
     hp(x);

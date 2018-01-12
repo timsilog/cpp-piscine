@@ -1,5 +1,28 @@
 #include "FragTrap.hpp"
 
+FragTrap::FragTrap(void) : ClapTrap() {
+    std::string quotes[5] = {
+        "Battlecruiser operational.\n",
+        "Power overwhelming!\n",
+        "READY TO ROLL OUT.\n",
+        "My life for Aiur..\n",
+        "SCV good to go, sir!\n"
+    };
+
+    std::srand(std::time(0));
+    this->_name = "default";
+    this->_hp = 100;
+    this->_maxHp = 100;
+    this->_ep = 100;
+    this->_maxEp = 100;
+    this->_lvl = 1;
+    this->_mAtk = 30;
+    this->_rAtk = 20;
+    this->_def = 5;
+    this->_type = "FR4G-TP";
+    std::cout << this->announce() << quotes[rand() % 5];
+}
+
 FragTrap::FragTrap(std::string name) : ClapTrap(name) {
     std::string quotes[5] = {
         "Battlecruiser operational.\n",

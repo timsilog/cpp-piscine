@@ -18,6 +18,7 @@ class ScavTrap
         int         _def;
 
     public:
+        ScavTrap(void);
         ScavTrap( std::string name );
         ScavTrap(ScavTrap const & src);
         ~ScavTrap ( void );
