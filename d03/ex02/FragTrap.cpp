@@ -22,6 +22,10 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name) {
     std::cout << this->announce() << quotes[rand() % 5];
 }
 
+FragTrap::FragTrap(FragTrap const & src) {
+    *this = src;
+}
+
 FragTrap::~FragTrap(void) {
     std::string quotes[5] = {
         "Snake? SNAAAAAAAAKE!!!",

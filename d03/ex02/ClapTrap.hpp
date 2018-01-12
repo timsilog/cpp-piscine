@@ -19,6 +19,7 @@ class ClapTrap
         std::string _type;
     public:
         ClapTrap( std::string name );
+        ClapTrap(ClapTrap const & src);
         ~ClapTrap ( void );
         ClapTrap & operator=(ClapTrap const & rhs);
 

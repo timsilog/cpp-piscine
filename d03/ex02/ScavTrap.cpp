@@ -22,6 +22,10 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
     std::cout << this->announce() << quotes[rand() % 5];
 }
 
+ScavTrap::ScavTrap(ScavTrap const & src) {
+    *this = src;
+}
+
 ScavTrap::~ScavTrap(void) {
     std::string quotes[5] = {
         "You Spoony Bard!",

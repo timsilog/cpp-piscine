@@ -13,6 +13,10 @@ FragTrap::FragTrap(std::string name) : _name(name), _hp(100), _maxHp(100), _ep(1
     std::cout << this->announce() << quotes[rand() % 5];
 }
 
+FragTrap::FragTrap(FragTrap const & src) {
+    *this = src;
+}
+
 FragTrap::~FragTrap(void) {
     std::string quotes[5] = {
         "Snake? SNAAAAAAAAKE!!!",

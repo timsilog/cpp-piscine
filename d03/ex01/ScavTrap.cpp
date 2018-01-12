@@ -13,6 +13,10 @@ ScavTrap::ScavTrap(std::string name) : _name(name), _hp(100), _maxHp(100), _ep(5
     std::cout << this->announce() << quotes[rand() % 5];
 }
 
+ScavTrap::ScavTrap(ScavTrap const & src) {
+    *this = src;
+}
+
 ScavTrap::~ScavTrap(void) {
     std::string quotes[5] = {
         "FUS RO DA!",

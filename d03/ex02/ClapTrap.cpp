@@ -4,6 +4,10 @@ ClapTrap::ClapTrap(std::string name) : _name(name) {
     std::cout << "<CLAPTRAP CREATED>\n";
 }
 
+ClapTrap::ClapTrap(ClapTrap const & src) {
+    *this = src;
+}
+
 ClapTrap::~ClapTrap(void) {
     std::cout << "<CLAPTRAP DESTROYED>\n";
 }
