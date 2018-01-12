@@ -13,6 +13,7 @@ class SuperTrap : public FragTrap, public NinjaTrap
         SuperTrap(SuperTrap const & src);
         ~SuperTrap(void);
 
+        using ClapTrap::operator=;
         // SuperTrap & operator=(SuperTrap const & rhs);
 };
 

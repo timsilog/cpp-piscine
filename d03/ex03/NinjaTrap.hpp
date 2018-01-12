@@ -12,8 +12,7 @@ class NinjaTrap : public ClapTrap
         NinjaTrap( std::string name );
         NinjaTrap(NinjaTrap const & src);
         ~NinjaTrap ( void );
-        // NinjaTrap & operator=(NinjaTrap const & rhs);
-
+        using ClapTrap::operator=;
         void    ninjaShoebox(NinjaTrap & t);
         void    ninjaShoebox(FragTrap & t);
         void    ninjaShoebox(ScavTrap & t);

@@ -10,8 +10,7 @@ class ScavTrap : virtual public ClapTrap
         ScavTrap( std::string name );
         ScavTrap(ScavTrap const & src);
         ~ScavTrap ( void );
-        // ScavTrap & operator=(ScavTrap const & rhs);
-
+        using ClapTrap::operator=;        
         void        challengeNewcomer(std::string const & target);
 };
 

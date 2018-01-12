@@ -11,6 +11,10 @@ Sorcerer::~Sorcerer() {
     << ", is dead. Consequences will never be the same !\n";
 }
 
+Sorcerer & Sorcerer::operator=(Sorcerer const & rhs) {
+    *this = rhs;
+}
+
 std::string Sorcerer::getName(void) {
     return (this->_name);
 }
