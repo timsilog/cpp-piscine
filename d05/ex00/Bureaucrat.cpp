@@ -12,7 +12,7 @@ Bureaucrat::Bureaucrat() : _name("none") {
     this->_grade = 150;
 }
 
-Bureaucrat::Bureaucrat(Bureaucrat const & src) {
+Bureaucrat::Bureaucrat(Bureaucrat const & src) : _name(src._name) {
     *this = src;
 }
 
